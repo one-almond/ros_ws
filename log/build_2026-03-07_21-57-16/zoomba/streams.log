@@ -1,0 +1,71 @@
+[0.007s] Invoking command in '/ros_ws/build/zoomba': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros_ws/src/zoomba -DCMAKE_INSTALL_PREFIX=/ros_ws/install/zoomba
+[0.069s] -- The C compiler identification is GNU 11.4.0
+[0.109s] -- The CXX compiler identification is GNU 11.4.0
+[0.114s] -- Detecting C compiler ABI info
+[0.142s] -- Detecting C compiler ABI info - done
+[0.145s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.145s] -- Detecting C compile features
+[0.145s] -- Detecting C compile features - done
+[0.147s] -- Detecting CXX compiler ABI info
+[0.176s] -- Detecting CXX compiler ABI info - done
+[0.179s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.179s] -- Detecting CXX compile features
+[0.180s] -- Detecting CXX compile features - done
+[0.183s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.249s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.298s] -- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)
+[0.326s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.329s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.335s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.343s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.353s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.380s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.382s] -- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.428s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.441s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.461s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.467s] -- Looking for pthread.h
+[0.499s] -- Looking for pthread.h - found
+[0.499s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.525s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.526s] -- Found Threads: TRUE  
+[0.556s] -- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)
+[0.574s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[0.575s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[0.575s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[0.664s] -- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)
+[0.665s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.702s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.702s] -- Added test 'lint_cmake' to check CMake code style
+[0.703s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.703s] -- Added test 'xmllint' to check XML markup files
+[0.704s] -- Configuring done
+[0.706s] -- Generating done
+[0.707s] -- Build files have been written to: /ros_ws/build/zoomba
+[0.711s] Invoked command in '/ros_ws/build/zoomba' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /ros_ws/src/zoomba -DCMAKE_INSTALL_PREFIX=/ros_ws/install/zoomba
+[0.712s] Invoking command in '/ros_ws/build/zoomba': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros_ws/build/zoomba -- -j16 -l16
+[0.728s] Invoked command in '/ros_ws/build/zoomba' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /ros_ws/build/zoomba -- -j16 -l16
+[0.731s] Invoking command in '/ros_ws/build/zoomba': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros_ws/build/zoomba
+[0.734s] -- Install configuration: ""
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba//launch
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba//launch/sim.launch.py
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba//urdf
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba//urdf/zoomba.urdf.xacro
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba//config
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba//config/params.yaml
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/ament_index/resource_index/package_run_dependencies/zoomba
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/ament_index/resource_index/parent_prefix_path/zoomba
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba/environment/ament_prefix_path.sh
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba/environment/ament_prefix_path.dsv
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba/environment/path.sh
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba/environment/path.dsv
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba/local_setup.bash
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba/local_setup.sh
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba/local_setup.zsh
+[0.734s] -- Installing: /ros_ws/install/zoomba/share/zoomba/local_setup.dsv
+[0.735s] -- Installing: /ros_ws/install/zoomba/share/zoomba/package.dsv
+[0.735s] -- Installing: /ros_ws/install/zoomba/share/ament_index/resource_index/packages/zoomba
+[0.735s] -- Installing: /ros_ws/install/zoomba/share/zoomba/cmake/zoombaConfig.cmake
+[0.735s] -- Installing: /ros_ws/install/zoomba/share/zoomba/cmake/zoombaConfig-version.cmake
+[0.735s] -- Installing: /ros_ws/install/zoomba/share/zoomba/package.xml
+[0.735s] Invoked command in '/ros_ws/build/zoomba' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /ros_ws/build/zoomba

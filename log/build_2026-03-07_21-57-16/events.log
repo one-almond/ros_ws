@@ -1,0 +1,86 @@
+[0.000000] (-) TimerEvent: {}
+[0.000282] (zoomba) JobQueued: {'identifier': 'zoomba', 'dependencies': OrderedDict()}
+[0.000332] (zoomba) JobStarted: {'identifier': 'zoomba'}
+[0.006819] (zoomba) JobProgress: {'identifier': 'zoomba', 'progress': 'cmake'}
+[0.006988] (zoomba) Command: {'cmd': ['/usr/bin/cmake', '/ros_ws/src/zoomba', '-DCMAKE_INSTALL_PREFIX=/ros_ws/install/zoomba'], 'cwd': '/ros_ws/build/zoomba', 'env': OrderedDict([('HOSTNAME', 'aidan-Linux'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', '::1'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros_ws/build/zoomba'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.069327] (zoomba) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099953] (-) TimerEvent: {}
+[0.109381] (zoomba) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.114069] (zoomba) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.142298] (zoomba) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.145214] (zoomba) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.145457] (zoomba) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.145805] (zoomba) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.147474] (zoomba) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.176587] (zoomba) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.179585] (zoomba) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.179716] (zoomba) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.179911] (zoomba) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.183086] (zoomba) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.200023] (-) TimerEvent: {}
+[0.249372] (zoomba) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.297892] (zoomba) StdoutLine: {'line': b'-- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.300091] (-) TimerEvent: {}
+[0.326306] (zoomba) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.329420] (zoomba) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.335145] (zoomba) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.343331] (zoomba) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.353020] (zoomba) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.380090] (zoomba) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.381998] (zoomba) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.400167] (-) TimerEvent: {}
+[0.428337] (zoomba) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.441717] (zoomba) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.461499] (zoomba) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.467139] (zoomba) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.499397] (zoomba) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.499547] (zoomba) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.500219] (-) TimerEvent: {}
+[0.525758] (zoomba) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.526238] (zoomba) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.556191] (zoomba) StdoutLine: {'line': b'-- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)\n'}
+[0.574128] (zoomba) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.574976] (zoomba) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[0.575072] (zoomba) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.600300] (-) TimerEvent: {}
+[0.663798] (zoomba) StdoutLine: {'line': b'-- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)\n'}
+[0.664858] (zoomba) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.700378] (-) TimerEvent: {}
+[0.702307] (zoomba) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.702613] (zoomba) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.702886] (zoomba) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.703508] (zoomba) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.704197] (zoomba) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.706246] (zoomba) StdoutLine: {'line': b'-- Generating done\n'}
+[0.707136] (zoomba) StdoutLine: {'line': b'-- Build files have been written to: /ros_ws/build/zoomba\n'}
+[0.710956] (zoomba) CommandEnded: {'returncode': 0}
+[0.711343] (zoomba) JobProgress: {'identifier': 'zoomba', 'progress': 'build'}
+[0.711805] (zoomba) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros_ws/build/zoomba', '--', '-j16', '-l16'], 'cwd': '/ros_ws/build/zoomba', 'env': OrderedDict([('HOSTNAME', 'aidan-Linux'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', '::1'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros_ws/build/zoomba'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.728546] (zoomba) CommandEnded: {'returncode': 0}
+[0.728726] (zoomba) JobProgress: {'identifier': 'zoomba', 'progress': 'install'}
+[0.731705] (zoomba) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros_ws/build/zoomba'], 'cwd': '/ros_ws/build/zoomba', 'env': OrderedDict([('HOSTNAME', 'aidan-Linux'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', '::1'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('PWD', '/ros_ws/build/zoomba'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.734110] (zoomba) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.734150] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba//launch\n'}
+[0.734202] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba//launch/sim.launch.py\n'}
+[0.734252] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba//urdf\n'}
+[0.734284] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba//urdf/zoomba.urdf.xacro\n'}
+[0.734312] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba//config\n'}
+[0.734337] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba//config/params.yaml\n'}
+[0.734376] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/ament_index/resource_index/package_run_dependencies/zoomba\n'}
+[0.734426] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/ament_index/resource_index/parent_prefix_path/zoomba\n'}
+[0.734536] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/environment/ament_prefix_path.sh\n'}
+[0.734598] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/environment/ament_prefix_path.dsv\n'}
+[0.734639] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/environment/path.sh\n'}
+[0.734677] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/environment/path.dsv\n'}
+[0.734711] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/local_setup.bash\n'}
+[0.734746] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/local_setup.sh\n'}
+[0.734783] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/local_setup.zsh\n'}
+[0.734820] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/local_setup.dsv\n'}
+[0.734850] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/package.dsv\n'}
+[0.734897] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/ament_index/resource_index/packages/zoomba\n'}
+[0.734941] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/cmake/zoombaConfig.cmake\n'}
+[0.734970] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/cmake/zoombaConfig-version.cmake\n'}
+[0.735005] (zoomba) StdoutLine: {'line': b'-- Installing: /ros_ws/install/zoomba/share/zoomba/package.xml\n'}
+[0.735494] (zoomba) CommandEnded: {'returncode': 0}
+[0.745091] (zoomba) JobEnded: {'identifier': 'zoomba', 'rc': 0}
+[0.745322] (-) EventReactorShutdown: {}
