@@ -1,0 +1,10 @@
+[0.004s] Invoking command in '/ros_ws/build/zoomba': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros_ws/build/zoomba -- -j16 -l16
+[0.015s] [31mCMake Error at CMakeLists.txt:27:
+[0.015s]   Parse error.  Expected a command name, got unquoted argument with text
+[0.015s]   "<depend>rclcpp</depend>".
+[0.015s] 
+[0.015s] [0m
+[0.015s] -- Configuring incomplete, errors occurred!
+[0.015s] See also "/ros_ws/build/zoomba/CMakeFiles/CMakeOutput.log".
+[0.015s] gmake: *** [Makefile:226: cmake_check_build_system] Error 1
+[0.016s] Invoked command in '/ros_ws/build/zoomba' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros_ws/build/zoomba -- -j16 -l16

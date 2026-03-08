@@ -10,8 +10,8 @@ import os
 def generate_launch_description():
     pkg_dir = get_package_share_directory('zoomba')
     xacro_file = os.path.join(pkg_dir, 'urdf', 'zoomba.urdf.xacro')
-    rviz_config_file = os.path.join(pkg_dir, 'config', 'view.rviz')
-    use_sim_time = {'use_sim_time': True}
+    rviz_config_file = os.path.join(pkg_dir, 'config', 'rviz.rviz')
+    use_sim_time = {'use_sim_time': False}
    
     # robot description
     robot_state_pub = Node(

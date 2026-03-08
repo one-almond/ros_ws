@@ -10,6 +10,8 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(robot_state_publisher REQUIRED)
 find_package(xacro REQUIRED)
+find_package(std_msgs REQUIRED)
+
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -22,6 +24,14 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+
+
+install(PROGRAMS
+  src/publisher.py
+  src/subscriber.py
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 # Install directories (URDF, launch, config, meshes)
 install(DIRECTORY

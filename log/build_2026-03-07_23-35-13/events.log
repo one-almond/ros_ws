@@ -1,0 +1,35 @@
+[0.000000] (-) TimerEvent: {}
+[0.000069] (zoomba) JobQueued: {'identifier': 'zoomba', 'dependencies': OrderedDict()}
+[0.000211] (zoomba) JobStarted: {'identifier': 'zoomba'}
+[0.003975] (zoomba) JobProgress: {'identifier': 'zoomba', 'progress': 'cmake'}
+[0.004203] (zoomba) JobProgress: {'identifier': 'zoomba', 'progress': 'build'}
+[0.004474] (zoomba) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros_ws/build/zoomba', '--', '-j16', '-l16'], 'cwd': '/ros_ws/build/zoomba', 'env': OrderedDict([('HOSTNAME', 'aidan-Linux'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/ros_ws/install/zoomba:/opt/ros/humble'), ('PWD', '/ros_ws/build/zoomba'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros_ws/install/zoomba:/opt/ros/humble')]), 'shell': False}
+[0.021789] (zoomba) CommandEnded: {'returncode': 0}
+[0.022003] (zoomba) JobProgress: {'identifier': 'zoomba', 'progress': 'install'}
+[0.024975] (zoomba) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ros_ws/build/zoomba'], 'cwd': '/ros_ws/build/zoomba', 'env': OrderedDict([('HOSTNAME', 'aidan-Linux'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/ros_ws/install/zoomba:/opt/ros/humble'), ('PWD', '/ros_ws/build/zoomba'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros_ws/install/zoomba:/opt/ros/humble')]), 'shell': False}
+[0.027692] (zoomba) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.027745] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba//launch\n'}
+[0.027791] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba//launch/sim.launch.py\n'}
+[0.027816] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba//urdf\n'}
+[0.027838] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba//urdf/zoomba.urdf.xacro\n'}
+[0.027859] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba//config\n'}
+[0.027880] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba//config/params.yaml\n'}
+[0.027929] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba//config/rviz.rviz\n'}
+[0.027949] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/ament_index/resource_index/package_run_dependencies/zoomba\n'}
+[0.027971] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/ament_index/resource_index/parent_prefix_path/zoomba\n'}
+[0.027992] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/environment/ament_prefix_path.sh\n'}
+[0.028012] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/environment/ament_prefix_path.dsv\n'}
+[0.028055] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/environment/path.sh\n'}
+[0.028072] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/environment/path.dsv\n'}
+[0.028088] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/local_setup.bash\n'}
+[0.028108] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/local_setup.sh\n'}
+[0.028127] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/local_setup.zsh\n'}
+[0.028145] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/local_setup.dsv\n'}
+[0.028162] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/package.dsv\n'}
+[0.028180] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/ament_index/resource_index/packages/zoomba\n'}
+[0.028197] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/cmake/zoombaConfig.cmake\n'}
+[0.028214] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/cmake/zoombaConfig-version.cmake\n'}
+[0.028231] (zoomba) StdoutLine: {'line': b'-- Up-to-date: /ros_ws/install/zoomba/share/zoomba/package.xml\n'}
+[0.028663] (zoomba) CommandEnded: {'returncode': 0}
+[0.035270] (zoomba) JobEnded: {'identifier': 'zoomba', 'rc': 0}
+[0.035545] (-) EventReactorShutdown: {}

@@ -1,0 +1,2 @@
+Invoking command in '/ros_ws/build/zoomba': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros_ws/build/zoomba -- -j16 -l16
+Invoked command in '/ros_ws/build/zoomba' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros_ws/build/zoomba -- -j16 -l16

@@ -1,0 +1,49 @@
+[0.000000] (-) TimerEvent: {}
+[0.000109] (zoomba) JobQueued: {'identifier': 'zoomba', 'dependencies': OrderedDict()}
+[0.000251] (zoomba) JobStarted: {'identifier': 'zoomba'}
+[0.004096] (zoomba) JobProgress: {'identifier': 'zoomba', 'progress': 'cmake'}
+[0.004338] (zoomba) JobProgress: {'identifier': 'zoomba', 'progress': 'build'}
+[0.004618] (zoomba) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ros_ws/build/zoomba', '--', '-j16', '-l16'], 'cwd': '/ros_ws/build/zoomba', 'env': OrderedDict([('HOSTNAME', 'aidan-Linux'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/ros'), ('OLDPWD', '/'), ('ROS_PYTHON_VERSION', '3'), ('WAYLAND_DISPLAY', ''), ('COLCON_PREFIX_PATH', '/ros_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('AMENT_PREFIX_PATH', '/ros_ws/install/zoomba:/opt/ros/humble'), ('PWD', '/ros_ws/build/zoomba'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ros_ws/install/zoomba:/opt/ros/humble')]), 'shell': False}
+[0.017239] (zoomba) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.070377] (zoomba) StdoutLine: {'line': b'-- Found rclcpp: 16.0.17 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.081622] (zoomba) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.082586] (zoomba) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.084980] (zoomba) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.088748] (zoomba) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.093421] (zoomba) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.099944] (-) TimerEvent: {}
+[0.105842] (zoomba) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.106369] (zoomba) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.9 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.155926] (zoomba) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.174830] (zoomba) StdoutLine: {'line': b'-- Found robot_state_publisher: 3.0.3 (/opt/ros/humble/share/robot_state_publisher/cmake)\n'}
+[0.181048] (zoomba) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[0.181640] (zoomba) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[0.200005] (-) TimerEvent: {}
+[0.231853] (zoomba) StdoutLine: {'line': b'-- Found xacro: 2.1.1 (/opt/ros/humble/share/xacro/cmake)\n'}
+[0.231985] (zoomba) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.260889] (zoomba) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.260948] (zoomba) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[0.260971] (zoomba) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.261080] (zoomba) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[0.261242] (zoomba) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.261362] (zoomba) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[0.261711] (zoomba) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.261737] (zoomba) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.261841] (zoomba) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.262103] (zoomba) StdoutLine: {'line': b'-- Configuring done\n'}
+[0.263438] (zoomba) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:29 (add_dependencies):\n'}
+[0.263468] (zoomba) StderrLine: {'line': b'  The dependency target "beginner_tutorials_generate_messages_cpp" of target\n'}
+[0.263488] (zoomba) StderrLine: {'line': b'  "talker" does not exist.\n'}
+[0.263505] (zoomba) StderrLine: {'line': b'\n'}
+[0.263522] (zoomba) StderrLine: {'line': b'\x1b[0m\n'}
+[0.263539] (zoomba) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:33 (add_dependencies):\n'}
+[0.263556] (zoomba) StderrLine: {'line': b'  The dependency target "beginner_tutorials_generate_messages_cpp" of target\n'}
+[0.263572] (zoomba) StderrLine: {'line': b'  "listener" does not exist.\n'}
+[0.263588] (zoomba) StderrLine: {'line': b'\n'}
+[0.263604] (zoomba) StderrLine: {'line': b'\x1b[0m\n'}
+[0.264785] (zoomba) StdoutLine: {'line': b'-- Generating done\n'}
+[0.265282] (zoomba) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[0.267384] (zoomba) StderrLine: {'line': b'gmake: *** [Makefile:226: cmake_check_build_system] Error 1\n'}
+[0.268473] (zoomba) CommandEnded: {'returncode': 2}
+[0.273531] (zoomba) JobEnded: {'identifier': 'zoomba', 'rc': 2}
+[0.283777] (-) EventReactorShutdown: {}

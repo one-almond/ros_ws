@@ -1,0 +1,27 @@
+[0.004s] Invoking command in '/ros_ws/build/zoomba': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros_ws/build/zoomba -- -j16 -l16
+[0.022s] Invoked command in '/ros_ws/build/zoomba' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /ros_ws/build/zoomba -- -j16 -l16
+[0.025s] Invoking command in '/ros_ws/build/zoomba': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros_ws/build/zoomba
+[0.027s] -- Install configuration: ""
+[0.027s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba//launch
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba//launch/sim.launch.py
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba//urdf
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba//urdf/zoomba.urdf.xacro
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba//config
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba//config/params.yaml
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba//config/rviz.rviz
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/ament_index/resource_index/package_run_dependencies/zoomba
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/ament_index/resource_index/parent_prefix_path/zoomba
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/environment/ament_prefix_path.sh
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/environment/ament_prefix_path.dsv
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/environment/path.sh
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/environment/path.dsv
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/local_setup.bash
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/local_setup.sh
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/local_setup.zsh
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/local_setup.dsv
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/package.dsv
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/ament_index/resource_index/packages/zoomba
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/cmake/zoombaConfig.cmake
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/cmake/zoombaConfig-version.cmake
+[0.028s] -- Up-to-date: /ros_ws/install/zoomba/share/zoomba/package.xml
+[0.028s] Invoked command in '/ros_ws/build/zoomba' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /ros_ws/build/zoomba

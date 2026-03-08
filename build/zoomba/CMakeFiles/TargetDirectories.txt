@@ -1,0 +1,9 @@
+/ros_ws/build/zoomba/CMakeFiles/uninstall.dir
+/ros_ws/build/zoomba/CMakeFiles/zoomba_uninstall.dir
+/ros_ws/build/zoomba/CMakeFiles/test.dir
+/ros_ws/build/zoomba/CMakeFiles/edit_cache.dir
+/ros_ws/build/zoomba/CMakeFiles/rebuild_cache.dir
+/ros_ws/build/zoomba/CMakeFiles/list_install_components.dir
+/ros_ws/build/zoomba/CMakeFiles/install.dir
+/ros_ws/build/zoomba/CMakeFiles/install/local.dir
+/ros_ws/build/zoomba/CMakeFiles/install/strip.dir
