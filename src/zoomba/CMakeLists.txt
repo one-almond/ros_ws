@@ -30,6 +30,7 @@ endif()
 install(PROGRAMS
   src/publisher.py
   src/subscriber.py
+  src/lidar.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
