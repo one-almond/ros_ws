@@ -1,8 +1,0 @@
-[31mCMake Error at CMakeLists.txt:27:
-  Parse error.  Expected a command name, got unquoted argument with text
-  "<depend>rclcpp</depend>".
-
-[0m
--- Configuring incomplete, errors occurred!
-See also "/ros_ws/build/zoomba/CMakeFiles/CMakeOutput.log".
-gmake: *** [Makefile:226: cmake_check_build_system] Error 1
