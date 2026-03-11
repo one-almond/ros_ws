@@ -1,5 +1,6 @@
 /ros_ws/install/zoomba/lib/zoomba/publisher.py
 /ros_ws/install/zoomba/lib/zoomba/subscriber.py
+/ros_ws/install/zoomba/share/zoomba//launch/razz.launch.py
 /ros_ws/install/zoomba/share/zoomba//launch/sim.launch.py
 /ros_ws/install/zoomba/share/zoomba//urdf/zoomba.urdf.xacro
 /ros_ws/install/zoomba/share/zoomba//config/params.yaml
