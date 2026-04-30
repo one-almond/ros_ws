@@ -12,6 +12,7 @@
   <depend>rclcpp</depend>
   <depend>ros2launch</depend>
   <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
 
   <!-- For spawning and URDF -->
   <depend>robot_state_publisher</depend>

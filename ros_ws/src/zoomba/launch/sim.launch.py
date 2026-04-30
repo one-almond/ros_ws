@@ -31,9 +31,21 @@ def generate_launch_description():
     )
 
 
-
+    controller_node = Node(
+        package='zoomba',
+        executable='diff_drive_controller',
+        name='diff_drive_controller',
+        output='screen',
+        parameters=[
+            use_sim_time,
+            {'wheel_radius': 0.05},
+            {'wheel_separation': 0.3},
+            {'max_wheel_speed': 10.0},
+        ]
+    )
     return LaunchDescription([
         robot_state_pub,
         rviz_node,
+        controller_node,
 
         ])
