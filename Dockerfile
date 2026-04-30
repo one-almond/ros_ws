@@ -33,3 +33,4 @@ COPY bashrc /home/${USERNAME}/.bashrc
 ENTRYPOINT [ "/bin/bash", "entrypoint.sh" ]
 
 CMD ["bash"]
+
