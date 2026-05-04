@@ -22,7 +22,8 @@ install(TARGETS
 install(PROGRAMS
   src/publisher.py
   src/subscriber.py
-  src/lidar.py
+  src/diff_drive.py
+  src/odom_pub.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

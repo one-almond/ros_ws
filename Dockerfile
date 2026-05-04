@@ -1,16 +1,26 @@
 FROM osrf/ros:humble-desktop-full
 
 # =========================
-# BASIC TOOLS
+# SYSTEM DEPENDENCIES
 # =========================
-RUN apt-get update && apt-get install -y \
-    nano \
-    bash \
-    python3-argcomplete \
-    sudo \
+USER root
+
+RUN mkdir -p /var/lib/apt/lists/partial && \
+    apt-get update && apt-get install -y \
+    git \
+    cmake \
+    build-essential \
+    pkg-config \
+    python3-dev \
     python3-pip \
+    swig \
+    libusb-1.0-0-dev \
+    nano \
+    sudo \
+    ros-humble-slam-toolbox\
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip install pyserial
 # =========================
 # NON-ROOT USER
 # =========================
@@ -18,53 +28,41 @@ ARG USERNAME=user
 ARG USER_UID=1000
 ARG USER_GID=1000
 
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd -m --uid $USER_UID --gid $USER_GID -s /bin/bash $USERNAME \
-    && usermod -aG sudo $USERNAME \
-    && echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME \
-    && chmod 0440 /etc/sudoers.d/$USERNAME
+RUN groupadd --gid $USER_GID $USERNAME && \
+    useradd -m --uid $USER_UID --gid $USER_GID -s /bin/bash $USERNAME && \
+    usermod -aG sudo $USERNAME && \
+    echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME && \
+    chmod 0440 /etc/sudoers.d/$USERNAME && \
+    usermod -aG dialout $USERNAME
 
-RUN usermod -aG dialout ${USERNAME}
-# =========================
-# USER ENV SETUP
-# =========================
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
-# ROS environment setup
+# =========================
+# ROS SETUP
+# =========================
 RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 
 # =========================
-# OPTIONAL: PYTHON DEPS FOR ROS BRIDGE
+# BUILD YDLIDAR SDK + PYTHON BINDINGS
 # =========================
-RUN pip3 install --user pyserial
-
-USER root
-# =========================
-# YDLIDAR SDK BUILD
-# =========================
-RUN apt-get update && apt-get install -y \
-    git \
-    cmake \
-    build-essential \
-    libusb-1.0-0-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-WORKDIR /opt
-
-RUN git clone https://github.com/YDLIDAR/YDLidar-SDK.git
-
-WORKDIR /opt/YDLidar-SDK
-
-RUN mkdir build && cd build && \
-    cmake .. && \
+RUN git clone https://github.com/one-almond/YDLidar-SDK.git && \
+    cd YDLidar-SDK && \
+    mkdir build && cd build && \
+    cmake .. -DBUILD_PYTHON=ON && \
     make -j$(nproc) && \
-    make install
+    sudo make install
 
-# Python binding path fix (important)
-ENV PYTHONPATH=/usr/local/lib/python3/dist-packages:$PYTHONPATH
+# =========================
+# FIX PYTHON PATH (IMPORTANT)
+# =========================
+RUN echo "export PYTHONPATH=/usr/local/lib/python3/dist-packages:\$PYTHONPATH" >> ~/.bashrc
 
-USER $USERNAME
+# =========================
+# TEST INSTALL (optional sanity check)
+# =========================
+RUN /bin/bash -c "source ~/.bashrc && python3 -c 'import ydlidar' || true"
+
 # =========================
 # ENTRYPOINT
 # =========================

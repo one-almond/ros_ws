@@ -1,6 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import JointState
+from std_msgs.msg import String
 import serial
 import threading
 
@@ -18,18 +19,18 @@ class SerialBridge(Node):
         # =====================
         # ROS TOPICS
         # =====================
-        self.cmd_sub = self.create_subscription(
-            JointState,
-            '/joint_commands',
-            self.command_callback,
+        self.wheel_sub = self.create_subscription(
+            String,
+            '/wheels',
+            self.wheel_callback,
             10
         )
 
-        self.state_pub = self.create_publisher(
-            JointState,
-            '/joint_states',
-            10
-        )
+        # self.state_pub = self.create_publisher(
+        #     JointState,
+        #     '/joint_states',
+        #     10
+        # )
 
         # =====================
         # SERIAL THREAD
@@ -43,42 +44,22 @@ class SerialBridge(Node):
     # =====================
     # ROS → Arduino
     # =====================
-    def command_callback(self, msg: JointState):
+    def wheel_callback(self, msg: String):
 
-        if len(msg.position) < 3:
-            return
+        l,r = msg.data.split(",")
 
-        b = int(msg.position[0])
-        s = int(msg.position[1])
-        e = int(msg.position[2])
-
-        cmd = f"MOVE B{b} S{s} E{e}\n"
+        cmd = f"DRIVE L{l} R{r} \n"
+        #self.get_logger().info(f"Sending: {cmd}")
         self.ser.write(cmd.encode())
 
     # =====================
     # Arduino → ROS
     # =====================
     def read_serial(self):
-
         while self.running:
-            try:
+            if self.ser.in_waiting:
                 line = self.ser.readline().decode().strip()
-
-                if line.startswith("STATE"):
-                    parts = line.split()
-
-                    b = int(parts[1][1:])
-                    s = int(parts[2][1:])
-                    e = int(parts[3][1:])
-
-                    msg = JointState()
-                    msg.name = ["base", "shoulder", "elbow"]
-                    msg.position = [float(b), float(s), float(e)]
-
-                    self.state_pub.publish(msg)
-
-            except Exception as e:
-                self.get_logger().error(str(e))
+                self.get_logger().info(f"Arduino: {line}")
 
 
 def main():
