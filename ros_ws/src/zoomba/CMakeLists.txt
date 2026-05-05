@@ -13,25 +13,17 @@ find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
-# Diff drive controller
-add_executable(diff_drive_controller src/diff_drive_controller.cpp)
-target_include_directories(diff_drive_controller PUBLIC include)
-ament_target_dependencies(diff_drive_controller
-  rclcpp
-  std_msgs
-  geometry_msgs
-  sensor_msgs
-)
+
 
 install(TARGETS
-  diff_drive_controller
   DESTINATION lib/${PROJECT_NAME}
 )
 
 install(PROGRAMS
   src/publisher.py
   src/subscriber.py
-  src/lidar.py
+  src/diff_drive.py
+  src/odom_pub.py
   DESTINATION lib/${PROJECT_NAME}
 )
 

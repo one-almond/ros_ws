@@ -1,0 +1,24 @@
+[33m081bc4f[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: revert: Revert "test again"
+[33m6a51af7[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{1}: commit: test again
+[33m364b40f[m[33m ([m[1;32mhelp[m[33m)[m HEAD@{2}: checkout: moving from test to main
+[33m01f3cfb[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m)[m HEAD@{3}: commit: add new project files
+[33m67eb006[m HEAD@{4}: commit: test pub
+[33m578224a[m HEAD@{5}: commit: none
+[33m37fa629[m HEAD@{6}: commit: working on launch file
+[33m8519ec6[m HEAD@{7}: commit: predockerrewrite
+[33m364b40f[m[33m ([m[1;32mhelp[m[33m)[m HEAD@{8}: checkout: moving from main to test
+[33m364b40f[m[33m ([m[1;32mhelp[m[33m)[m HEAD@{9}: commit (merge): Merge branch 'main' of https://github.com/one-almond/ros_ws
+[33m9468ddb[m HEAD@{10}: commit: test2
+[33m4ae6646[m HEAD@{11}: commit: Re-root repo at parent
+[33m06f2e73[m HEAD@{12}: reset: moving to HEAD
+[33m06f2e73[m HEAD@{13}: commit: base
+[33m5cdbfb6[m HEAD@{14}: commit: lidar added, and launch file updated to remove rviz node and add lidar node. CMakeLists.txt updated to include lidar.py in install.
+[33md976182[m HEAD@{15}: commit: remove build install log from tracking
+[33m01507dd[m HEAD@{16}: commit: add gitignore
+[33m5b8ea51[m HEAD@{17}: commit: raspberry pi launch file built
+[33m7a9e977[m HEAD@{18}: commit: raspberry pi launch file added
+[33mfe0b390[m HEAD@{19}: commit: build with pub/sub
+[33m2c20761[m HEAD@{20}: commit: rm build
+[33md604bab[m HEAD@{21}: commit: remove build
+[33m519be4c[m HEAD@{22}: commit: from ubuntu
+[33mf1e59e0[m HEAD@{23}: commit (initial): initial commit

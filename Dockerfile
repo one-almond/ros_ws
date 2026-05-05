@@ -1,36 +1,73 @@
 FROM osrf/ros:humble-desktop-full
 
-RUN apt-get update \
-    && apt-get install -y nano && rm -rf /var/lib/apt/lists/*
+# =========================
+# SYSTEM DEPENDENCIES
+# =========================
+USER root
 
-ARG USERNAME=ros
-ARG USER_UID=1000
-ARG USER_GID=${USER_UID}
-
-#create a non-root user
-RUN groupadd --gid $USER_GID $USERNAME \
-    && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
-    && mkdir /home/$USERNAME/.config && chown $USER_UID:$USER_GID /home/$USERNAME/.config
-
-#set up autocomplete
-RUN apt-get install -y \
-    bash \
-    python3-argcomplete 
-
-#set up sudo
-RUN apt-get update \
-    && apt-get install -y sudo \
-    && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME\
-    && chmod 0440 /etc/sudoers.d/$USERNAME \
+RUN mkdir -p /var/lib/apt/lists/partial && \
+    apt-get update && apt-get install -y \
+    git \
+    cmake \
+    build-essential \
+    pkg-config \
+    python3-dev \
+    python3-pip \
+    swig \
+    libusb-1.0-0-dev \
+    nano \
+    sudo \
+    ros-humble-slam-toolbox\
     && rm -rf /var/lib/apt/lists/*
 
+RUN pip install pyserial
+# =========================
+# NON-ROOT USER
+# =========================
+ARG USERNAME=user
+ARG USER_UID=1000
+ARG USER_GID=1000
 
-    
+RUN groupadd --gid $USER_GID $USERNAME && \
+    useradd -m --uid $USER_UID --gid $USER_GID -s /bin/bash $USERNAME && \
+    usermod -aG sudo $USERNAME && \
+    echo "$USERNAME ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/$USERNAME && \
+    chmod 0440 /etc/sudoers.d/$USERNAME && \
+    usermod -aG dialout $USERNAME
 
+USER $USERNAME
+WORKDIR /home/$USERNAME
+
+# =========================
+# ROS SETUP
+# =========================
+RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+
+# =========================
+# BUILD YDLIDAR SDK + PYTHON BINDINGS
+# =========================
+RUN git clone https://github.com/one-almond/YDLidar-SDK.git && \
+    cd YDLidar-SDK && \
+    mkdir build && cd build && \
+    cmake .. -DBUILD_PYTHON=ON && \
+    make -j$(nproc) && \
+    sudo make install
+
+# =========================
+# FIX PYTHON PATH (IMPORTANT)
+# =========================
+RUN echo "export PYTHONPATH=/usr/local/lib/python3/dist-packages:\$PYTHONPATH" >> ~/.bashrc
+
+# =========================
+# TEST INSTALL (optional sanity check)
+# =========================
+RUN /bin/bash -c "source ~/.bashrc && python3 -c 'import ydlidar' || true"
+
+# =========================
+# ENTRYPOINT
+# =========================
 COPY entrypoint.sh /entrypoint.sh
-COPY bashrc /home/${USERNAME}/.bashrc
+RUN sudo chmod +x /entrypoint.sh
 
-ENTRYPOINT [ "/bin/bash", "entrypoint.sh" ]
-
+ENTRYPOINT ["/entrypoint.sh"]
 CMD ["bash"]
-
