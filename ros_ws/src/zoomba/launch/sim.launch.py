@@ -11,15 +11,24 @@ from launch.actions import ExecuteProcess
 def generate_launch_description():
     pkg_dir = get_package_share_directory('zoomba')
     xacro_file = os.path.join(pkg_dir, 'urdf', 'zoomba.urdf.xacro')
+    robot_urdf = os.path.join(
+        get_package_share_directory('robot_description'),
+        'urdf',
+        'robot_description.urdf'
+    )
     rviz_config_file = os.path.join(pkg_dir, 'config', 'rviz.rviz')
     use_sim_time = {'use_sim_time': False}
    
+
+    with open(robot_urdf, 'r') as infp:
+        robot_description = infp.read()
+
     # robot description
     robot_state_pub = Node(
         package='robot_state_publisher',
         executable='robot_state_publisher',
         output='screen',
-        parameters=[use_sim_time, {'robot_description': Command(['xacro ', xacro_file])}],
+        parameters=[use_sim_time, {'robot_description': robot_description}],
     )
 
     lidar_driver_launch = Node(
