@@ -1,0 +1,50 @@
+services:
+  ros2:
+    platform: linux/arm64 
+    build: 
+      context: .
+      dockerfile: Dockerfile.pi
+    container_name: ros2_Zoomba
+
+    # =====================
+    # DEV WORKSPACE MOUNT
+    # =====================
+    volumes:
+      - ./ros_ws:/home/user/ros_ws
+      - /dev:/dev
+      - /tmp/.X11-unix:/tmp/.X11-unixS
+    # =====================
+    # DEVICE ACCESS (Arduino)
+    # =====================
+    #devices:
+    #  - /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0:/dev/USB0
+    device_cgroup_rules:
+      - 'c 188:* rmw'
+      - 'c 166:* rmw'
+      - 'c 13:* rmw'
+    
+    
+    # =====================
+    # PRIVILEGES (needed for serial + USB)
+    # =====================
+    #privileged: true
+
+    # =====================
+    # ENVIRONMENT
+    # =====================
+    environment:
+      - ROS_DOMAIN_ID=0
+      - DISPLAY=${DISPLAY}
+    
+      
+    network_mode: host
+    group_add:
+      - dialout  # For serial access permissions
+    #  - input
+    # =====================
+    # INTERACTIVE SHELL
+    # =====================
+    stdin_open: true
+    tty: true
+
+    command: bash
