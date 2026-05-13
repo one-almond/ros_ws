@@ -1,6 +1,8 @@
 services:
   ros2:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.pc
     container_name: ros2_Zoomba
 
     # =====================

@@ -48,6 +48,7 @@ RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 # =========================
 RUN git clone https://github.com/one-almond/YDLidar-SDK.git && \
     cd YDLidar-SDK && \
+    rm -rf build && \
     mkdir build && cd build && \
     cmake .. -DBUILD_PYTHON=ON && \
     make -j$(nproc) && \
