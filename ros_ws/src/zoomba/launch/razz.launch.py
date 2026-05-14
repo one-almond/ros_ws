@@ -13,19 +13,19 @@ def generate_launch_description():
     rviz_config_file = os.path.join(pkg_dir, 'config', 'rviz.rviz')
     use_sim_time = {'use_sim_time': False}
    
-    # robot description
-    robot_state_pub = Node(
-        package='robot_state_publisher',
-        executable='robot_state_publisher',
-        output='screen',
-        parameters=[use_sim_time, {'robot_description': Command(['xacro ', xacro_file])}],
+    lidar_driver_launch = Node(
+        package='ydlidar_ros2_driver',
+        executable='ydlidar_ros2_driver_node',
+        name='ydlidar_ros2_driver_node',
+        output='log',
+        parameters=[use_sim_time, os.path.join(get_package_share_directory('ydlidar_ros2_driver'), 'params', 'X4-Pro.yaml')],
     )
 
 
 
 
     return LaunchDescription([
-        robot_state_pub,
+        lidar_driver_launch,
 
 
         ])

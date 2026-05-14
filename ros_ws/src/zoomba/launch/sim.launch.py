@@ -69,7 +69,7 @@ def generate_launch_description():
 
     return LaunchDescription([
         robot_state_pub,
-        lidar_driver_launch,
+        #lidar_driver_launch,
         rviz_node,
         slam_launch,
         rf2o_launch,

@@ -9,7 +9,7 @@ services:
     # DEV WORKSPACE MOUNT
     # =====================
     volumes:
-      - ./ros_ws:/home/user/ros_ws
+      - .:/home/user/Ros
       - /dev:/dev
       - /tmp/.X11-unix:/tmp/.X11-unixS
     # =====================
