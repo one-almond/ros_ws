@@ -1,0 +1,15 @@
+[submodule "ros_ws/src/YDLidar-SDK"]
+    path = ros_ws/src/YDLidar-SDK
+    url = https://github.com/one-almond/YDLidar-SDK
+
+[submodule "ros_ws/src/rf2o_laser_odometry"]
+    path = ros_ws/src/rf2o_laser_odometry
+    url = https://github.com/MAPIRlab/rf2o_laser_odometry
+
+[submodule "ros_ws/src/xacro"]
+    path = ros_ws/src/xacro
+    url = https://github.com/ros/xacro
+
+[submodule "ros_ws/src/ydlidar_ros2_driver"]
+    path = ros_ws/src/ydlidar_ros2_driver
+    url = https://github.com/one-almond/ydlidar_ros2_driver
