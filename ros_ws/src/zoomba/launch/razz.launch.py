@@ -21,11 +21,16 @@ def generate_launch_description():
         parameters=[use_sim_time, os.path.join(get_package_share_directory('ydlidar_ros2_driver'), 'params', 'X4-Pro.yaml')],
     )
 
-
+    diff_drive = Node(
+        package='zoomba',
+        executable='diff_drive.py',
+        name='diff_drive_node',
+        output='screen'
+    )
 
 
     return LaunchDescription([
         lidar_driver_launch,
-
+        diff_drive,
 
         ])
