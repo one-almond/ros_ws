@@ -59,7 +59,8 @@ def generate_launch_description():
         package='rf2o_laser_odometry',
         executable='rf2o_laser_odometry_node',
         name='rf2o_laser_odometry_node',
-        output='log',
+        output='screen',
+        parameters=[{'laser_scan_topic': '/scan', 'freq': 4.0, 'init_pose_from_topic': '', 'publish_tf': True, 'base_frame_id': 'base_link', 'odom_frame_id': 'odom'}],
     )
 
     odom_pub_node = ExecuteProcess(
